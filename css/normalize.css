@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/*Обнуляю налаштування css */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*---------------------------------*/
+:root{
+
+  --main-ff: "Roboto", serif;
+  --logo-ff: "Raleway", serif;
+  
+  --text-akcent-color: #212121;
+  --text-color: #757575;
+  --text-invert-akcent-color: #FFFFFF;
+  --text-invert-color: rgba(255, 255, 255, 0.6);
+  --text-blu-color: #2196F3;
+  --text-blu-hower-color: #188CEB;
+  --white-bg-color: #FFFFFF;
+  --white-hue-bg-color: #F5F4FA;
+  
+  --dirk-bg-color: #2F303A;
+
+}
