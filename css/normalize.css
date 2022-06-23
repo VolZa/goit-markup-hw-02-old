@@ -88,10 +88,11 @@ h6 {
   --text-invert-akcent-color: #FFFFFF;
   --text-invert-color: rgba(255, 255, 255, 0.6);
   --text-blu-color: #2196F3;
-  --text-blu-hower-color: #188CEB;
+  --text-blu-hover-color: #188CE8;
   --white-bg-color: #FFFFFF;
   --white-hue-bg-color: #F5F4FA;
   
   --dirk-bg-color: #2F303A;
+  --button-color:  #F5F4FA;
 
 }
