@@ -78,21 +78,76 @@ h6 {
 }
 
 /*---------------------------------*/
+/* Збираю root по новій */
 :root{
+  --main-ff: "Roboto", san-serif;
+  --logo-ff: "Raleway", san-serif;
 
-  --main-ff: "Roboto", serif;
-  --logo-ff: "Raleway", serif;
-  
-  --text-akcent-color: #212121;
-  --text-color: #757575;
-  --text-invert-akcent-color: #FFFFFF;
-  --text-invert-color: rgba(255, 255, 255, 0.6);
-  --text-blu-color: #2196F3;
-  --text-blu-hover-color: #188CE8;
-  --white-bg-color: #FFFFFF;
-  --white-hue-bg-color: #F5F4FA;
-  
-  --dirk-bg-color: #2F303A;
-  --button-color:  #F5F4FA;
+  --main-color: #212121;
+  --context-color: #757575;
 
+  --dark-acsent: #000000;
+  --white-acsent: #FFFFFF;
+  --white-border:  #EEEEEE;
+  --white-сontext: rgba(255, 255, 255, 0.6);
+  --white-background: #F5F4FA;
+  --dark-background: #2F303A;
+  --shadow-color:rgba(0, 0, 0, 0.15);
+
+  --chromatic-usual: #2196F3;
+  --chromatic-hover: #188CE8;
+  
+  
+  
 }
+/* :root{
+ 1.14 111
+ 1.17 1
+  1.19  1
+  1.36  1
+  1.63
+  1.71  1
+  1.88  1
+  2
+
+  0.03em
+  0.06 em
+} */ 
+
+
+/* .visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.link {
+  text-decoration: none;
+  font-family: inherit;
+}
+.list{
+  /* прибрали кнопку */
+  /* list-style: none; 
+}
+.button{
+  border: none;
+  background-color: transparent;
+  color: inherit;
+
+  cursor: pointer;
+}
+.section{
+  font-weight: 600;
+  font-size: 48px;
+  color: var(--main-dark);
+
+  line-height: 1.67;
+} 
+CSSGrid-Generator.netlify.app*/

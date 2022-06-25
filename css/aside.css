@@ -1,7 +1,13 @@
 body {
   font-family: var(--main-ff);
   color: var(--text-akcent-color);
-
+  font-style: normal;
+ 
+  font-weight: 400;
+  font-size: 14px;
+  
+  line-height: 1.14;
+  letter-spacing: 0.03em;
 }
 .wrapper{
 
@@ -19,11 +25,10 @@ header {
   height: 80px;
   z-index: 10;
  
-  background-color: var(--white-bg-color);
-  /* border-width: 0 0 1px 0; */
-  border-bottom: 1px;
-  /* border: 2px solid red; */
-  border-color: blue;
+  background-color: var(--white-acsent);
+
+  /* border-bottom: 1px;
+  border-color: blue; */
 }
 .wrapper__menu {
   max-width: 1200px;
@@ -43,14 +48,13 @@ header {
   font-family: var(--logo-ff);
   font-weight: 700;
   font-size: 26px;
-  letter-spacing: 0.03em;
-
+  line-height: 1.19;
 }
 .logo span {
-  color: var(--text-blu-color);
+  color: var(--chromatic-usual);
 }
 .logo:hover span {
-  color: var(--text-blu-hover-color);
+  color: var(--chromatic-hover);
 }
 .logo-black {
   padding: 0px 68px 4px 0;
@@ -62,9 +66,6 @@ header {
   align-items: baseline;
 }
 
-nav .menu__items {
-  align-items: center;
-}
 .menu__items {
   display: flex;
 }
@@ -74,18 +75,22 @@ nav .menu__items {
 
 .menu__item {
   padding: 0px 25px;
+  
   font-weight: 500;
   letter-spacing: 0.02em;
 }
-.menu__item a{
+.item-menu{
   color: var(--text-akcent-color);
 }
+.active{
+  color: var(--chromatic-usual);
+}
 .menu__items-kontakt a{
-  color: var(--text-color);
+  color: var(--context-color);
   /* color: currentColor */
 }
 .menu__item:hover a{
-  color: var(--text-blu-hover-color);
+  color: var(--chromatic-hover);
 }
 .menu__item:last-child {
   padding: 0 25px;
@@ -93,15 +98,15 @@ nav .menu__items {
 
 
 .logo-white{
-  color: var(--text-invert-akcent-color);
+  color: var(--white-acsent);
   display: block;
   margin-bottom: 20px;
 }
 .logo-white:hover span {
-  color: var(--text-blu-hover-color);
+  color: var(--chromatic-hover);
 }
 .logo-white:hover{
-  color: var(--text-invert-color);
+  color: var(--white-сontext);
 }
 .address-items > li {
   margin-bottom: 9px;
@@ -116,16 +121,16 @@ nav .menu__items {
   letter-spacing: 0.03em;
 }
 .address-item-adress:hover{
-  color: var(--text-blu-hover-color);
+  color: var(--chromatic-hover);
 }
 .address-item-kontakt:hover{
-  color: var(--text-blu-hover-color);
+  color: var(--chromatic-hover);
 }
 .address-item-adress{
-  color: var(--text-invert-akcent-color);
+  color: var(--white-acsent);
 }
 .address-item-kontakt{
-  color: var(--text-invert-color);
+  color: var(--white-сontext);
 }
 .line{
   /* display: block; */
@@ -142,7 +147,7 @@ nav .menu__items {
 footer{
   margin: 0 auto;
   max-width: 1600px;
-  background-color: var(--dirk-bg-color);
+  background-color: var(--dark-background);
 }
 
 .footer-wrapper {

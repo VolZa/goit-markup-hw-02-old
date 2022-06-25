@@ -15,7 +15,7 @@ h2{
   text-align: center;
   letter-spacing: 0.03em;
 
-  color: #212121;
+  color: var(--main-color);
   padding-bottom: 50px;
 }
 
@@ -55,12 +55,12 @@ Line height: 116%
 Align: Center
 Vertical align: Top
 Letter spacing: 6%*/
-  color: var(--text-invert-akcent-color);
+  color: var(--white-acsent);
 }
 .section-1__button {
-  background-color:  var(--text-blu-color);
+  background-color:  var(--chromatic-usual);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  color: var(--text-invert-akcent-color);
+  color: var(--white-acsent);
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -69,8 +69,8 @@ Letter spacing: 6%*/
   transition-duration: 0.2s;
 }
 .section-1__button:hover {
-  background: var(--text-blu-hover-color);
-  color: var(--text-invert-color);
+  background: var(--chromatic-hover);
+  color: var(--white-сontext);
   /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
   /* border-radius: 4px; */
 }
@@ -117,7 +117,7 @@ line-height: 24px;
 
 letter-spacing: 0.03em;
 
-color: #757575;
+color: var(--context-color);
 }
 .h2-hidden{
   display: none;
@@ -131,7 +131,7 @@ color: #757575;
 
   width: 1600px;
   height: 648px;
-  background-color: #F5F4FA;
+  background-color: var(--white-background);
   justify-content: center;
 }
 
@@ -166,7 +166,7 @@ line-height: 19px;
 text-align: center;
 letter-spacing: 0.03em;
 
-color: #212121;
+color: var(--main-color);
 padding-bottom: 10px;
 }
 .section-4__item-content{
@@ -179,7 +179,7 @@ line-height: 19px;
 text-align: center;
 letter-spacing: 0.03em;
 
-color: #757575;
+color: var(--context-color);
 padding-bottom: 30px;
 }
 .card{
