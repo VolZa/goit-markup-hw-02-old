@@ -1,85 +1,387 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"); */
 
+/* перенести в normalize.css */
+@charset "UTF-8";
+/*Обнуляю налаштування css */
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*---------------------------------*/
+:root{
+  --main-ff: "Roboto", san-serif;
+  --logo-ff: "Raleway", san-serif;
+
+  --main-color: #212121;
+  --context-color: #757575;
+
+  --dark-acsent: #000000;
+  --white-acsent: #FFFFFF;
+  --white-border:  #EEEEEE;
+  --white-сontext: rgba(255, 255, 255, 0.6);
+  --white-background: #F5F4FA;
+  --dark-background: #2F303A;
+  --shadow-color:rgba(0, 0, 0, 0.15);
+
+  --chromatic-usual: #2196F3;
+  --chromatic-hover: #188CE8;  
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+/* ===== end normalize.css ====== */
+
+/*  перенести в aside.css */
+body {
+  font-family: var(--main-ff);
+  color: var(--main-color);
+  background-color: var(--white-acsent);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+}
+
+/* Використовував при розмітці
+.wrapper-header {
+  margin: 0 auto;
+  max-width: 1600px;   
+} */
+/* Розгорну при розмітці 
+header {
+  position: fixed;
+  розгорну при розмітці
+  display: flex;
+  max-width: 1600px;
+  width: 100%;
+  height: 80px;
+  z-index: 10;  полоску меню лишити зверху
+} */
+/* Розгорну для розмітки
+.wrapper__menu {
+  max-width: 1200px;
+  display: flex;
+  margin: 0px auto;
+  padding: 0 0 0 15px;
+
+  width: 100%;
+  flex: 1 1 auto;
+  justify-content: space-between;
+  align-items: center;
+
+  min-height: 80px;
+} */
+.logo {
+  font-family: var(--logo-ff);
+  /* Не задаю бо --logo-ff з вибирав лише з font-weight 700 
+  Тому хоч задавай хоч ні всерівно буде те що є в наявності
+  якщо потрібно буде інші fw то розкоментувати
+  хоча логічніше розкоментувати відразу (бо потім можна й забути)
+  чи на всяк випадок перепитати?
+  font-weight: 700;  */
+  font-size: 26px;
+  line-height: 1.19;
+  /* padding: 0px 68px 4px 0; розкоментую для вирівнювання */
+}
+.chromatic {
+  color: var(--chromatic-usual);
+}
+.chromatic:hover,
+.chromatic:active
+{
+  color: var(--chromatic-hover);
+}
+.logo-black {
+  color: var(--dark-acsent);
+}
+
+/* Розкоментую для Стилізації
+ .menu {
+  display: flex;
+  align-items: baseline;
+} */
+
+.menu__items {
+  /* display: flex; Розкоментую для розмітки */
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.menu__items-kontakt{
+  margin: 0 -10px 0 0;
+}
+
+/* Розкоментую для розмітки 
+.menu__item {
+  padding: 0px 25px;
+} */
+
+.menu__item .active{
+  color: var(--chromatic-usual);
+}
+.menu__items-kontakt a{
+  color: var(--context-color);
+}
+.item-menu{
+  color: var(--main-color);
+}
+.item-menu:hover,
+.item-menu:active                   
+ {
+  color: var(--chromatic-hover);
+}
+/* Уточнити під час оформлення 
+.menu__item:last-child {
+  padding: 0 25px;
+} */
 
 
-main {
+.logo-white{
+  color: var(--white-acsent);
+  /* Скористатись для розмітки
+  display: block;
+  margin-bottom: 20px; */
+}
+.logo-white span{
+  color: var(--chromatic-usual);
+}
+
+.logo-white:hover span {
+  color: var(--chromatic-hover);
+}
+.logo-white:hover{
+  /* На макеті цей ховер не вказаний на вимогу "замовника" видалю */
+  color: var(--white-сontext);
+}
+
+.address-items{
+line-height: 1.71;
+}
+/* Уточню коли розмічатиму
+.address-items > li {
+  margin-bottom: 9px;
+}
+.address-items > li:last-child {
+  margin-bottom: 0px;
+} */
+.item-adress {
+  color: var(--white-acsent);
+}
+.item-adress:hover{
+  /* Майже не відрізняється, але як і всі хавери 
+  для повного співпадіння замінити на --chromatic-usual */
+  color: var(--chromatic-hover);
+}
+
+.adress-item-kontakt{
+  color: var(--white-сontext);
+}
+.adress-item-kontakt:hover{
+  color: var(--chromatic-hover);
+}
+
+.line{
+  /* Для розмітки
+  margin: 80px auto 0 auto;
+  position: fixed; */
+
+  width: 1600px; 
+  height: 0px;
+  border-bottom: 1px  solid #ECECEC;
+}
+
+footer{
+  /* 
+  margin: 0 auto;  Розмітка
+  max-width: 1600px;*/
+  background-color: var(--dark-background); 
+}
+/* Елемент розмітки
+.footer-wrapper {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 60px 15px;
+
+  width: 100%;
+  min-height: 250px;
+} */
+/*===== end ascide.css ===== */
+
+/* Індекс (styles.css) */
+
+/* Оформлення 
+  main {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} */
 h2{
-  font-style: normal;
+  /* всі видимі заголовки h2 однакові тому не додав клас */
   font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
-
-  color: var(--main-color);
-  padding-bottom: 50px;
+ 
+  /* Оформлення 
+  padding-bottom: 50px; */
 }
 
 
 
-/*----------section-1-------------------*/
-.section-1 {
-  margin-top: 80px;
+/*----------section-hero-------------------*/
+.section-hero {
+  /* margin-top: 80px;
   display: flex;
   text-align: center;
   align-items: center;
-  justify-content: center;
+  justify-content: center; 
   width: 1600px;
-  height: 600px;
-  background-color: #2f303a;
+  height: 600px;*/
+  background-color: var(--dark-background);
 }
-.section-1__wrapper {
+/* Оформлення
+ .section-hero__wrapper {
   max-width: 696px;
   max-height: 120px;
-}
+} */
 h1 {
-  padding: 0 0 44px 0;
-  text-transform: uppercase;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 44px;
-  line-height: 60px;
-  line-height: 116%;
-  text-align: center;
-  letter-spacing: 5px;
-  font-weight: 900;
+  /* padding: 0 0 44px 0; 
+  -Для Форматування 
+  
+  Можна додати клас до h1 (щоб була однакова вага)
+  , але потрібно самому нарватись на ситуацію, 
+  коли ця вага стане в нагоді, тому лишив без класу,
+  до того-ж він один на сторінці за визначенням*/
 
-  /*Font style: Black
-Font size: 44px
-Line height: 60px
-Line height: 116%
-Align: Center
-Vertical align: Top
-Letter spacing: 6%*/
+  text-transform: uppercase;
+  font-weight: 900; 
+  font-size: 44px;
+  
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  
   color: var(--white-acsent);
 }
-.section-1__button {
+
+.section-hero__button {
   background-color:  var(--chromatic-usual);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   color: var(--white-acsent);
+  
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
   padding: 10px 32px;
   border-radius: 4px;
-  transition-duration: 0.2s;
+  /* це для мене шпаргалка (щоб було перед очима для анімації) 
+  transition-duration: 0.2s; */
 }
-.section-1__button:hover {
+
+.section-hero__button:hover,
+.section-hero__button:active {
   background: var(--chromatic-hover);
+ 
+  /*за просьбою замовника                      Видалити зміну color*/
   color: var(--white-сontext);
-  /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
-  /* border-radius: 4px; */
+
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
 }
-/*--------------section-2------------------------*/
-.wrapper-main-s2s3{
+/*--------------section-features------------------------*/
+/* .wrapper-sections-ater-hero{
   width: 1200px;
   padding: 92px 15px 95px;
-}
-.section-2{ 
+} */
+/*  Оформлення
+  .section-features{ 
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -90,102 +392,184 @@ Letter spacing: 6%*/
 
   flex-direction: column;
   margin: 0px 0px 94px 0;
-}
-.section-2__items{
+} */
+/* Це оформлення 
+.section-features__items{
   display: flex;
   justify-content: space-between;
-}
-.section-2__item{
+} */
+
+/* Оформлення
+ .section-features__item{
   flex-basis: 23%;
   
   justify-content: right;
-}
-.section-2__item-title{
+} */
+.section-features__item-title{
   font-weight: 700;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  padding-bottom: 8px;
+  /* padding-bottom: 8px;  для оформлення*/
 }
-.section-2__item-content{
-  font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 24px;
-/* or 171% */
+.section-features__item-content{
+  line-height: 1.71;
+  color: var(--context-color);
+}
 
-letter-spacing: 0.03em;
-
-color: var(--context-color);
-}
-.h2-hidden{
-  display: none;
-}
-.section-3{
+.section-lesson{
   /*padding: 0 0 94px 0;*/
 }
 
-.wrapper-main-s4{
+.wrapper-main-team{
+  /* Оформлення
   display:flex;
 
   width: 1600px;
-  height: 648px;
+  height: 648px; */
   background-color: var(--white-background);
   justify-content: center;
 }
 
-.section-4{
-  /*border: 10px solid #ece89d;*/
+/* Оформлення 
+.section-team{
   display:flex;
   flex-wrap:wrap;
   padding-top: 94px;
 
   max-width: 1200px;
   justify-content: center;
-}
-.section-4__title{
+} */
+/* Оформлення 
+.section-team__title{
   flex: 0 1 100%;
-}
-.section-4__items{
+} */
+
+.section-team__items{
+  font-size: 16px;
+  text-align: center;  
+  /*  Оформлення
   width: 1200px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 94px;
-}
-.section-4__item-img{
+  */
+} 
+/* Оформлення
+.section-team__item-img{
   padding-bottom: 30px;
+} */
+.section-team__item-title{
+  font-weight: 500;
+  line-height: 1.36;
+  /* Оформлення
+  padding-bottom: 10px; */
 }
-.section-4__item-title{
-  font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-
-text-align: center;
-letter-spacing: 0.03em;
-
-color: var(--main-color);
-padding-bottom: 10px;
+.section-team__item-content{
+  line-height: 1.19;
+  color: var(--context-color);
+/* Оформлення
+padding-bottom: 30px; */
 }
-.section-4__item-content{
-  font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-/* identical to box height */
-
-text-align: center;
-letter-spacing: 0.03em;
-
-color: var(--context-color);
-padding-bottom: 30px;
-}
-.card{
+/* Оформлення
+ .card{
   width: 270;
   height: 368;
   background-color: #FFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+} */
+
+/* ================= */
+/*  перенести в (portfolio.css)*/
+body{
+  /* width: 100%;
+  align-items: center; */
 }
+.wrapper{
+  /* max-width: 1600px;
+  align-items: center; */
+}
+.container {
+  /* margin-top: 80px; */
+  /* display: flex; */
+  /* max-width: 1200px; */
+  
+}
+/* Оформлення
+.galery {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  flex: 0 1 33.33%;
+  justify-content: space-between;
+} */
+/* Оформлення додати класи для зменшення рангу
+.galery > li {
+  border: 5px solid #5e5373;
+  flex: 0 1 33.33%;
+} */
+/* Оформлення
+.card{
+  border: 1px solid var(--white-background);
+
+  margin-bottom: 30px;
+} */
+/* .card:nth-child(3n+3){
+  margin-right: 0px;
+  
+} */
+/* Оформлення 
+  .card__subscribe{
+  margin: 0 24px;
+  padding: 20px 0;
+} */
+.card__subscribe-title{
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.card__subscribe-content{
+  font-size: 16px;
+  line-height: 1.88;
+  color: var(--context-color);
+}
+/*  Оформлення
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+/* Оформлення
+  .filters {
+  display: flex;
+
+  margin: 174px auto 3px;
+  align-items: center;
+} */
+/* Оформлення
+.filter{
+  display: flex;
+  margin: 0px auto;
+} */
+.filter__button  {
+  background-color:  var(--white-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  padding: 6px 22px;
+  border-radius: 4px;
+  transition-duration: 0.2s;
+}
+.filter__button:hover,
+.filter__button:active {
+  background-color:  var(--chromatic-usual); 
+  color: var(--white-acsent);
+}
+/* Оформлення
+.galery {
+  display: flex;
+  max-width: 1200px ;
+} */
+/* ===== end portfolio =====*/
