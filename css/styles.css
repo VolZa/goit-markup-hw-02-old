@@ -201,7 +201,7 @@ header {
   padding: 0px 25px;
 } */
 
-.menu__item .active{
+.active a{
   color: var(--chromatic-usual);
 }
 .menu__items-kontakt a{
