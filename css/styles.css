@@ -128,22 +128,22 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Використовував при розмітці
+/* Використовував при розмітці */
 .wrapper-header {
   margin: 0 auto;
   max-width: 1600px;   
-} */
-/* Розгорну при розмітці 
+} 
+/* Розгорну при розмітці */
 header {
   position: fixed;
-  розгорну при розмітці
+  background-color: var(--white-acsent);
   display: flex;
   max-width: 1600px;
   width: 100%;
   height: 80px;
-  z-index: 10;  полоску меню лишити зверху
-} */
-/* Розгорну для розмітки
+  z-index: 10; 
+} 
+/* Розгорну для розмітки*/
 .wrapper__menu {
   max-width: 1200px;
   display: flex;
@@ -156,10 +156,10 @@ header {
   align-items: center;
 
   min-height: 80px;
-} */
+} 
 .logo {
   font-family: var(--logo-ff);
-  /* Не задаю бо --logo-ff з вибирав лише з font-weight 700 
+  /* Не задаю font-weight бо --logo-ff з вибирав лише з font-weight 700 
   Тому хоч задавай хоч ні всерівно буде те що є в наявності
   якщо потрібно буде інші fw то розкоментувати
   хоча логічніше розкоментувати відразу (бо потім можна й забути)
@@ -167,7 +167,7 @@ header {
   font-weight: 700;  */
   font-size: 26px;
   line-height: 1.19;
-  /* padding: 0px 68px 4px 0; розкоментую для вирівнювання */
+  padding: 0px 68px 4px 0;
 }
 .chromatic {
   color: var(--chromatic-usual);
@@ -181,25 +181,34 @@ header {
   color: var(--dark-acsent);
 }
 
-/* Розкоментую для Стилізації
+/* Розкоментую для Стилізації */
  .menu {
   display: flex;
-  align-items: baseline;
-} */
+  /* align-items: baseline; */
+  align-items: center;
+} 
 
 .menu__items {
-  /* display: flex; Розкоментую для розмітки */
+  display: flex; /* Розкоментую для розмітки */
   font-weight: 500;
   letter-spacing: 0.02em;
+
 }
 .menu__items-kontakt{
   margin: 0 -10px 0 0;
 }
 
-/* Розкоментую для розмітки 
+/* Розкоментую для розмітки */
 .menu__item {
+  display: flex;
   padding: 0px 25px;
-} */
+  align-items: center;
+} 
+
+.menu__item-ref:hover,
+.menu__item-ref:active {
+  color: var(--chromatic-hover);
+} 
 
 .active a{
   color: var(--chromatic-usual);
@@ -211,21 +220,25 @@ header {
   color: var(--main-color);
 }
 .item-menu:hover,
-.item-menu:active                   
- {
+.item-menu:active {
   color: var(--chromatic-hover);
 }
-/* Уточнити під час оформлення 
+
+.item-menu:hover,
+.item-menu:active {
+  color: var(--chromatic-hover);
+}
+/* Уточнити під час оформлення */
 .menu__item:last-child {
   padding: 0 25px;
-} */
+} 
 
 
 .logo-white{
   color: var(--white-acsent);
-  /* Скористатись для розмітки
+  /* Скористатись для розмітки */
   display: block;
-  margin-bottom: 20px; */
+  margin-bottom: 20px; 
 }
 .logo-white span{
   color: var(--chromatic-usual);
@@ -242,33 +255,35 @@ header {
 .address-items{
 line-height: 1.71;
 }
-/* Уточню коли розмічатиму
+/* Уточню коли розмічатиму*/
 .address-items > li {
   margin-bottom: 9px;
 }
 .address-items > li:last-child {
   margin-bottom: 0px;
-} */
-.item-adress {
+} 
+.item-address {
+  font-style: normal;
   color: var(--white-acsent);
 }
-.item-adress:hover{
+.item-address:hover{
   /* Майже не відрізняється, але як і всі хавери 
   для повного співпадіння замінити на --chromatic-usual */
   color: var(--chromatic-hover);
 }
 
-.adress-item-kontakt{
+.address-item-kontakt{
+  font-style: normal;
   color: var(--white-сontext);
 }
-.adress-item-kontakt:hover{
+.address-item-kontakt:hover{
   color: var(--chromatic-hover);
 }
 
 .line{
-  /* Для розмітки
+
   margin: 80px auto 0 auto;
-  position: fixed; */
+  position: fixed;
 
   width: 1600px; 
   height: 0px;
@@ -276,12 +291,11 @@ line-height: 1.71;
 }
 
 footer{
-  /* 
-  margin: 0 auto;  Розмітка
-  max-width: 1600px;*/
+  margin: 0 auto; 
+  max-width: 1600px;
   background-color: var(--dark-background); 
 }
-/* Елемент розмітки
+/* Елемент розмітки */
 .footer-wrapper {
   max-width: 1200px;
   margin: 0px auto;
@@ -289,17 +303,17 @@ footer{
 
   width: 100%;
   min-height: 250px;
-} */
+} 
 /*===== end ascide.css ===== */
 
 /* Індекс (styles.css) */
 
-/* Оформлення 
+/* Оформлення */
   main {
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
+} 
 h2{
   /* всі видимі заголовки h2 однакові тому не додав клас */
   font-weight: 700;
@@ -308,36 +322,30 @@ h2{
   text-align: center;
   letter-spacing: 0.03em;
  
-  /* Оформлення 
-  padding-bottom: 50px; */
+  /* Оформлення */
+  padding-bottom: 50px; 
 }
 
 
 
 /*----------section-hero-------------------*/
 .section-hero {
-  /* margin-top: 80px;
+  margin-top: 80px;
   display: flex;
   text-align: center;
   align-items: center;
   justify-content: center; 
   width: 1600px;
-  height: 600px;*/
+  height: 600px;
   background-color: var(--dark-background);
 }
-/* Оформлення
+/* Оформлення*/
  .section-hero__wrapper {
   max-width: 696px;
   max-height: 120px;
-} */
+} 
 h1 {
-  /* padding: 0 0 44px 0; 
-  -Для Форматування 
-  
-  Можна додати клас до h1 (щоб була однакова вага)
-  , але потрібно самому нарватись на ситуацію, 
-  коли ця вага стане в нагоді, тому лишив без класу,
-  до того-ж він один на сторінці за визначенням*/
+  padding: 0 0 44px 0;
 
   text-transform: uppercase;
   font-weight: 900; 
@@ -359,7 +367,7 @@ h1 {
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-
+  cursor: pointer;
   padding: 10px 32px;
   border-radius: 4px;
   /* це для мене шпаргалка (щоб було перед очима для анімації) 
@@ -376,11 +384,11 @@ h1 {
   box-shadow: 0 0 0 rgba(0, 0, 0, 0.15);
 }
 /*--------------section-features------------------------*/
-/* .wrapper-sections-ater-hero{
+ .wrapper-sections-ater-hero{
   width: 1200px;
   padding: 92px 15px 95px;
-} */
-/*  Оформлення
+} 
+  /* Оформлення */
   .section-features{ 
   display: flex;
   flex-wrap: wrap;
@@ -392,23 +400,23 @@ h1 {
 
   flex-direction: column;
   margin: 0px 0px 94px 0;
-} */
-/* Це оформлення 
+} 
+ /* Це оформлення  */
 .section-features__items{
   display: flex;
   justify-content: space-between;
-} */
+} 
 
-/* Оформлення
- .section-features__item{
+ /* Оформлення */
+.section-features__item{
   flex-basis: 23%;
   
   justify-content: right;
-} */
+} 
 .section-features__item-title{
   font-weight: 700;
   text-transform: uppercase;
-  /* padding-bottom: 8px;  для оформлення*/
+  padding-bottom: 8px; 
 }
 .section-features__item-content{
   line-height: 1.71;
@@ -416,20 +424,20 @@ h1 {
 }
 
 .section-lesson{
-  /*padding: 0 0 94px 0;*/
+  padding: 0 0 94px 0;
 }
 
 .wrapper-main-team{
-  /* Оформлення
+
   display:flex;
 
   width: 1600px;
-  height: 648px; */
+  height: 648px; 
   background-color: var(--white-background);
   justify-content: center;
 }
 
-/* Оформлення 
+ /* Оформлення  */
 .section-team{
   display:flex;
   flex-wrap:wrap;
@@ -437,139 +445,148 @@ h1 {
 
   max-width: 1200px;
   justify-content: center;
-} */
-/* Оформлення 
+} 
+/* Оформлення  */
 .section-team__title{
   flex: 0 1 100%;
-} */
+}
 
 .section-team__items{
   font-size: 16px;
   text-align: center;  
-  /*  Оформлення
+
   width: 1200px;
   display: flex;
   justify-content: space-between;
   padding-bottom: 94px;
-  */
 } 
-/* Оформлення
+ /* Оформлення */
 .section-team__item-img{
   padding-bottom: 30px;
-} */
+} 
 .section-team__item-title{
   font-weight: 500;
   line-height: 1.36;
-  /* Оформлення
-  padding-bottom: 10px; */
+
+  padding-bottom: 10px; 
 }
 .section-team__item-content{
   line-height: 1.19;
   color: var(--context-color);
-/* Оформлення
-padding-bottom: 30px; */
+
+  padding-bottom: 30px;
 }
-/* Оформлення
- .card{
+
+.card{
   width: 270;
   height: 368;
   background-color: #FFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-} */
+}
 
 /* ================= */
 /*  перенести в (portfolio.css)*/
 body{
-  /* width: 100%;
-  align-items: center; */
+  width: 100%;
+  align-items: center; 
 }
 .wrapper{
-  /* max-width: 1600px;
-  align-items: center; */
+  max-width: 1600px;
+  align-items: center;
 }
 .container {
-  /* margin-top: 80px; */
-  /* display: flex; */
-  /* max-width: 1200px; */
+  margin-top: 80px; 
+  display: flex;
+  max-width: 1200px;
   
 }
-/* Оформлення
+
 .galery {
   display: flex;
   flex-wrap: wrap;
   max-width: 1200px;
   flex: 0 1 33.33%;
   justify-content: space-between;
-} */
-/* Оформлення додати класи для зменшення рангу
+} 
+
+ /* Оформлення додати класи для зменшення рангу */
 .galery > li {
-  border: 5px solid #5e5373;
   flex: 0 1 33.33%;
-} */
-/* Оформлення
+} 
+
 .card{
   border: 1px solid var(--white-background);
 
   margin-bottom: 30px;
-} */
-/* .card:nth-child(3n+3){
+}
+.card:nth-child(3n+3){
   margin-right: 0px;
-  
-} */
-/* Оформлення 
+} 
+
   .card__subscribe{
   margin: 0 24px;
   padding: 20px 0;
-} */
+}
 .card__subscribe-title{
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--main-color);
 }
 .card__subscribe-content{
   font-size: 16px;
   line-height: 1.88;
   color: var(--context-color);
 }
-/*  Оформлення
+
 main{
   display: flex;
   flex-direction: column;
   align-items: center;
-} */
-/* Оформлення
-  .filters {
+} 
+
+.filters {
   display: flex;
 
-  margin: 174px auto 3px;
-  align-items: center;
-} */
-/* Оформлення
+  margin: 94px auto 3px;
+  /* align-items: center; */
+  justify-content: center;
+}
+
 .filter{
   display: flex;
-  margin: 0px auto;
-} */
+  margin: 0 auto;
+  justify-items: center;
+  flex: 1 1 auto;
+  
+
+} 
+.filter-item{
+  padding: 0 4px 50px;
+  
+}
 .filter__button  {
   background-color:  var(--white-background);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
   padding: 6px 22px;
   border-radius: 4px;
   transition-duration: 0.2s;
+
+  cursor: pointer;
 }
 .filter__button:hover,
 .filter__button:active {
   background-color:  var(--chromatic-usual); 
   color: var(--white-acsent);
 }
-/* Оформлення
+
 .galery {
   display: flex;
   max-width: 1200px ;
-} */
+} 
 /* ===== end portfolio =====*/
